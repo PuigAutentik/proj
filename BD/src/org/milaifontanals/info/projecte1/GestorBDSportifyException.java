@@ -7,15 +7,12 @@ package org.milaifontanals.info.projecte1;
 
 /**
  *
- * @author Toni Puig
+ * @author Professor
  */
-public class BD {
+public class GestorBDSportifyException extends Exception {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public GestorBDSportifyException(String message) {
+        super(message);
     }
-    
+
 }
