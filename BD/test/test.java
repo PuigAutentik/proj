@@ -24,28 +24,33 @@ import org.milaifontanals.info.projecte1.model.Reproduccio;
 
 public class test {
 
-   // static Connection con = DBManager.getConnection();
+    // static Connection con = DBManager.getConnection();
+    public static void main(String[] args) throws GestorBDSportifyException {
 
-    public static void main(String[] args) {
-        BDReproduccio bb= new BDReproduccio();
-        BDClient cli=new BDClient();
-        Date inici= new Date(116, 5,3);
-        Date ultima=new Date();
-        
-        try {
-            List<Reproduccio> rep=bb.getListProducte(0,"e",new java.sql.Date(inici.getTime()),new java.sql.Date(ultima.getTime()));
-            if(rep.isEmpty()==true){
-                System.out.println("Emptu");
-            }else{  
-            }
-            List<Client> clients=cli.getLlistaClients();
-            System.out.println("FUNCIONA cognom:" + clients.get(0).getCognom());
-            System.out.println(rep.get(0).getTimestamp());
-            //bb.modificarReproduccio(rep.get(0),rep.get(1));
-            System.out.println(rep.get(0).getTimestamp());   
-        } catch (Exception e) {
-            System.out.printf(e.getMessage());
-            e.printStackTrace();
-        }
+        BDProductes pro = new BDProductes();
+        pro.eliminarProducte(122);
+        pro.validarCanvis();
+//        BDReproduccio bb= new BDReproduccio();
+//        BDClient cli=new BDClient();
+//        Date inici= new Date(116, 5,3);
+//        Date ultima=new Date();
+//        
+//        try {
+//            List<Reproduccio> rep=bb.getListProducte(0,"e",new java.sql.Date(inici.getTime()),new java.sql.Date(ultima.getTime()));
+//            if(rep.isEmpty()==true){
+//                System.out.println("Emptu");
+//            }else{  
+//            }
+//            List<Client> clients=cli.getLlistaClients();
+//            System.out.println("FUNCIONA cognom:" + clients.get(0).getCognom());
+//            System.out.println(rep.get(0).getTimestamp());
+//            //bb.modificarReproduccio(rep.get(0),rep.get(1));
+//            System.out.println(rep.get(0).getTimestamp());   
+//        } catch (Exception e) {
+//            System.out.printf(e.getMessage());
+//            e.printStackTrace();
+//        }
+
     }
 }
+
