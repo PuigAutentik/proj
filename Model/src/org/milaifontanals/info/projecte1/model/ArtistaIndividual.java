@@ -20,6 +20,11 @@ public class ArtistaIndividual extends Artista {
         this.dataNeixament = dataNeixament;
         this.pais = pais;
     }
+    
+    public ArtistaIndividual(long id, String nom) {
+        super(id,nom);
+    }
+    
 
     public Pais getPais() {
         return pais;

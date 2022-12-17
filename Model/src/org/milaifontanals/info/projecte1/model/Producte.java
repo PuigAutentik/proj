@@ -10,14 +10,14 @@ package org.milaifontanals.info.projecte1.model;
  * @author Toni Puig
  */
 public abstract class Producte {
-
     private long id;
     private String titol;
     private boolean actiu;
     private Estil estil;
     private String tipus;
 
-    public Producte(String titol, boolean actiu, Estil estil, String tipus) {
+    public Producte(long id,String titol, boolean actiu, Estil estil, String tipus) {
+        this.id=id;
         this.titol = titol;
         this.actiu = actiu;
         this.estil = estil;
@@ -27,6 +27,21 @@ public abstract class Producte {
     public Producte(String titol, String tipus) {
         this.titol = titol;
         this.tipus = tipus;
+    }
+    
+    public Producte(long id,String titol, String tipus, Estil estil) {
+        this.id=id;
+        this.titol = titol;
+        this.tipus = tipus;
+        this.estil=estil;
+    }
+    
+    public Producte(long id,String titol, boolean actiu,String tipus, Estil estil) {
+        this.id=id;
+        this.titol = titol;
+        this.tipus = tipus;
+        this.estil=estil;
+        this.actiu=actiu;
     }
 
     public Producte(long id, String titol) {
@@ -42,6 +57,10 @@ public abstract class Producte {
 
     public long getId() {
         return id;
+    }
+    
+    public void setId(long id) {
+        this.id=id;
     }
 
     public String getTitol() {
@@ -59,5 +78,23 @@ public abstract class Producte {
     public void setActiu(boolean actiu) {
         this.actiu = actiu;
     }
+
+    public Estil getEstil() {
+        return estil;
+    }
+
+    public void setEstil(Estil estil) {
+        this.estil = estil;
+    }
+
+    public String getTipus() {
+        return tipus;
+    }
+
+    public void setTipus(String tipus) {
+        this.tipus = tipus;
+    }
+    
+    
 
 }

@@ -15,14 +15,18 @@ public class LlistaReproduccio extends Producte{
     private int durada;
     private List<Producte> items;
 
-    public LlistaReproduccio(int durada, List<Producte> items, String titol, boolean actiu, Estil estil, String tipus) {
-        super(titol, actiu, estil, tipus);
+    public LlistaReproduccio(long id,int durada, List<Producte> items, String titol, boolean actiu, Estil estil, String tipus) {
+        super(id,titol, actiu, estil, tipus);
         this.durada = durada;
         this.items = items;
     }
 
     public LlistaReproduccio(long id, String titol) {
         super(id, titol);
+    }
+    
+            public LlistaReproduccio(long id,String titol,boolean estat,String tipus,Estil estil) {
+        super(id,titol,estat, tipus,estil); 
     }
 
     

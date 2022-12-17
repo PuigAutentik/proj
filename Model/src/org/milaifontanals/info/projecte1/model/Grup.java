@@ -13,7 +13,6 @@ import java.util.List;
  * @author Toni Puig
  */
 public class Grup extends Artista {
-    private int id;
     private Date grp_dataCreacio;
     private List<Membregrup> membres;
 
@@ -21,6 +20,11 @@ public class Grup extends Artista {
         super(nom, tipusArtista);
         this.grp_dataCreacio = grp_dataCreacio;
     }
+    
+    public Grup(long id, String nom) {
+        super(id, nom);
+    }
+    
 
     public Date getGrp_dataCreacio() {
         return grp_dataCreacio;
@@ -44,14 +48,6 @@ public class Grup extends Artista {
 
     public void setMembres(List<Membregrup> membres) {
         this.membres = membres;
-    }
-
-    public int getId() {
-        return id;
-    }
-    
-    public void setId(int id) {
-        this.id = id;
     }
     
 }

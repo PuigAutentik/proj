@@ -18,6 +18,11 @@ public abstract class Artista {
         this.nom = nom;
         this.tipusArtista = tipusArtista;
     }
+    
+    public Artista(long id, String nom) {
+        this.id = id;
+        this.nom = nom;
+    }
 
     public String getNom() {
         return nom;
@@ -34,6 +39,16 @@ public abstract class Artista {
     public void setTipusArtista(String tipusArtista) {
         this.tipusArtista = tipusArtista;
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+    
+    
     
     
 }
